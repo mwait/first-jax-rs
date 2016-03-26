@@ -3,6 +3,8 @@ package com.wait.jaxrs;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.ws.rs.NotFoundException;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
 public class PatientServiceImpl implements PatientService {
@@ -32,6 +34,9 @@ public Patient getPatient(String id) {
 	System.out.println("-----getPatient, Patient id is: "+id);
 	long idNumber=Long.parseLong(id);
 	Patient patient = patients.get(idNumber);
+	if (patient == null) {
+		throw new WebApplicationException(Response.Status.NOT_FOUND);
+	}
 	return patient;
 }
 
@@ -52,7 +57,9 @@ public Response updatePatient(Patient patient) {
 		patients.put(patient.getId(), patient);
 		response=Response.ok().build();
 	} else {
-		response = Response.notModified().build();
+		//response = Response.notModified().build();
+		//alternatywa dla WebApplicationException(Response.Status.NOT_FOUND)
+		throw new NotFoundException();
 	}
 	return response;
 }
