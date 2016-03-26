@@ -11,3 +11,9 @@ http://localhost:8080/first-jax-rs/services/patientservice/patients/12
 
 sub resource mapping
 http://localhost:8080/first-jax-rs/services/patientservice/prescriptions/23/medicines/23
+
+
+
+client
+JAX-RS Client Api
+implementacja CXF

@@ -20,5 +20,5 @@
 	<!-- ten bean definiuje mapowanie na xml jsona -->
 	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
 	<!-- wyjatki przez mappera -->
-	<bean id="exeptionHandler" class="com.wait.jaxrs.exceptions.BusinessExceptionMapper"></bean>
+	<bean id="exceptionHandler" class="com.wait.jaxrs.exceptions.BusinessExceptionMapper"></bean>
 </beans>
