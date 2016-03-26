@@ -7,6 +7,8 @@ import javax.ws.rs.NotFoundException;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
+import com.wait.jaxrs.exceptions.SomeBusinessException;
+
 public class PatientServiceImpl implements PatientService {
 long currentId = 12;
 Map<Long, Patient> patients = new HashMap<Long, Patient>();
@@ -75,7 +77,8 @@ public Response deletePatients(String id) {
 		response = Response.ok().build();
 		patients.remove(idNumber);
 	} else {
-		response = Response.notModified().build();
+		//response = Response.notModified().build();
+		throw new SomeBusinessException("Business Exception");
 	}
 	return response;
 }
