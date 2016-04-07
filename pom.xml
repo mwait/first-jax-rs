@@ -4,10 +4,15 @@
 	<groupId>com.wait</groupId>
 	<artifactId>first-jax-rs</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>first-jax-rs-0.0.1</version>
 	<name>first-ws Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 	<build>
 		<finalName>first-jax-rs</finalName>
 
@@ -19,6 +24,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					  <encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -26,6 +32,23 @@
 				<version>2.1</version>
 				<configuration>
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
+			
+			  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<preparationGoals>clean deploy -DskipTests</preparationGoals>
 				</configuration>
 			</plugin>
 
@@ -170,4 +193,61 @@
 			<version>3.0.4</version>
 		</dependency>
 	</dependencies>
+	
+<!-- 	<repositories>
+		<repository>
+			<id>libs-release</id>
+			<url>urldo/artifactory/libs-release/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>libs-snapshot</id>
+			<url>urldo/artifactory/libs-snapshot/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<updatePolicy>interval:10</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories> 
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>plugins-release</id>
+			<url>urldo/artifactory/plugins-release/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories> -->
+<!-- 	<distributionManagement>
+		use the following if you're NOT using a snapshot version.
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>libs-release-local</id>
+			<name>Local repository for in-house libraries </name>
+			<url>urldo/artifactory/libs-release-local/</url>
+			<layout>default</layout>
+		</repository>
+		use the following if you are using a snapshot version.
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>libs-snapshot-local</id>
+			<name>Local repository for in-house snapshots</name>
+			<url>urldo/artifactory/libs-snapshot-local/</url>
+			<layout>default</layout>
+		</snapshotRepository>
+	</distributionManagement> -->
+
+	<scm>
+		<connection>scm:git:https://github.com/mwait/first-jax-rs.git</connection>
+		<developerConnection>scm:git:https://github.com/mwait/first-jax-rs.git</developerConnection>
+		<url>https://github.com/mwait/first-jax-rs</url>
+	  <tag>first-jax-rs-0.0.1-SNAPSHOT</tag>
+  </scm>
+   
+
 </project>
