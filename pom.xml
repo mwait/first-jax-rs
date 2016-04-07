@@ -4,7 +4,7 @@
 	<groupId>com.wait</groupId>
 	<artifactId>first-jax-rs</artifactId>
 	<packaging>war</packaging>
-	<version>first-jax-rs-0.0.1</version>
+	<version>first-jax-rs-0.0.1-SNAPSHOT</version>
 	<name>first-ws Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
