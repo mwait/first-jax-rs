@@ -3,7 +3,7 @@
 	<groupId>com.wait</groupId>
 	<artifactId>first-jax-rs</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>first-ws Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
@@ -254,7 +254,7 @@
 		<connection>scm:git:git://github.com/mwait/first-jax-rs.git</connection>
 		<developerConnection>scm:git:git@github.com/mwait/first-jax-rs.git</developerConnection>
 		<url>https://github.com/mwait/first-jax-rs</url>
-	 <tag>first-jax-rs-0.0.5-SNAPSHOT</tag>
+	 <tag>first-jax-rs-0.0.3-SNAPSHOT</tag>
   </scm>
    
 
