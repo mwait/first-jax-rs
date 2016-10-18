@@ -252,7 +252,7 @@
 		<connection>scm:git:https://github.com/mwait/first-jax-rs.git</connection>
 		<developerConnection>scm:git:https://github.com/mwait/first-jax-rs.git</developerConnection>
 		<url>https://github.com/mwait/first-jax-rs</url>
-	  <tag>first-jax-rs-0.0.1-SNAPSHOT</tag>
+	<!--  <tag>first-jax-rs-0.0.1-SNAPSHOT</tag> -->
   </scm>
    
 
